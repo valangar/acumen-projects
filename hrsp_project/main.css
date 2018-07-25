@@ -1,9 +1,50 @@
+:root {
+    --main-teal: #004d4d;
+    --main-teal-light: #00b3b3;
+    --main-teal-lightest: #01dddd;
+    --main-white: #ffffff;
+    --main-yellow: yellow;
+    --main-black: #333;
+	--main-grey: #c0c0c0;
+}
+html {
+	font-size: 14px;
+	color: #666;
+	font-family: sans-serif;
+	font-weight: normal;
+}
+body {
+	display:flex;
+	justify-content: center;
+}
+hr {
+	border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #004d4d, rgba(0, 0, 0, 0));
+}
+#main-container {
+	width: 1000px;
+	
+}
 .img{
 	padding: 5px;
 	box-shadow:  0px 5px 20px 0px #9e9e9ec9;
 	margin: 5px;
 	height: 500px;
 	background-size: cover;
+}
+h1 {
+	color:var(--main-teal);
+	margin-bottom: 0px;
+}
+h2, h3, h4, h5 {
+	color:var(--main-teal-light);
+	font-weight: normal;
+}
+.float-right {
+	width:100%;
+	text-align: right;
+	margin-top: 0px;
 }
 #hrsp {
 	content: url("./images/b_HRSP.png");

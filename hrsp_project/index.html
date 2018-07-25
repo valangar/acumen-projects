@@ -8,21 +8,68 @@
 			<script src = "./css/fontawesome-all.js"></script>
     </head>
     <body>
-		<h1>High Risk Score Physicians</h1>
-		<h3>Visualizing the geographic distribution of physicians across the nation</h3>
-		<hr>
-		<br><br>
-		<div id="intro-container">
+		<div id="main-container">
+			<h1>High Risk Score Physicians </h1>
+			<h4 class="float-right">- Visualizing the geographic distribution of physicians across the nation</h4>
 			
-		</div>
-		<div id="content">
-			<div class = "img" id = "hrsp" ></div>
-			<div class = "img" id = "hrsp-jd" ></div>
-			<div class = "img" id = "hrsp-county" ></div>
-			<div class = "img" id = "hrsp-county-zoom" ></div>
-			<div class = "img" id = "hrsp-county-filtered" ></div>
-			<div class = "img" id = "hrsp-table-metrics" ></div>
-			<div class = "img" id = "tutorial" ></div>
+			<hr>
+			<br><br>
+			<div id="intro-container">
+				<div id="date">Page updated: 25 July, 2018</div>
+				<div id="proj-date-loc">Project: November, 2017 - Acumen, LLC</div>
+				<div id="intro-p">
+					Acumen, LLC's clients assign a risk score rank to various physicians in the nation, which helps determine the physician of interest. The tool provides a visual representation of these ranks and a geographic understanding of the physicians' location.
+					This standalone visualization tool was my first end-to-end contribution. I was involved in:
+					<ul>
+						<li>gathering requirements from the client,</li>
+						<li>determining the user work flow, </li>
+						<li>designing the user interface, </li>
+						<li>implementing the application, </li>
+						<li>incorporating feedback, making changes to UI, updating features</li>
+						<li>debugging, checking for cross-browser compatibility - mainly Chrome and IE browsers</li>
+						<li>documenting code, creating user guides</li>
+					</ul>
+					The first iteration of the application took one month to implement, followed by the feedback phase.
+					
+					Technologies used: 
+					<ul>
+						<li>JavaScript - JQuery</li>
+						<li>D3.js for the map visualization and interactions</li>
+						<li>DataTable library for table view port</li>
+						<li>require.js to include libraries, modules</li>
+						<li>Bootstrap for the tutorial</li>
+					</ul>
+				</div>
+			</div>
+			<div id="content">
+				The final tool with the map view looks like this:
+				<div class = "img" id = "hrsp" ></div>
+				It contains two views:
+				<ul>
+					<li>Map View - default view</li>
+					<li>Table View - containing controls to toggle the table columns</li>
+				</ul>
+				The table shows up in both the views.
+				The Map View has two functionalities:
+				<ul>
+					<li> Provide a visual representation of ranks of regions based on various metrics</li>
+					<li>Act as a controller to filter the table of physician information.</li>
+				</ul>
+				The Table metrics view has a list of all the columns in the table and can be used to toggle the visibility of these columns. 
+				All the columns highlighted in blue are visible in the table.
+				Users can also toggle visibility of a group of columns.
+				<div class = "img" id = "hrsp-table-metrics" ></div>
+				I implemented mousewheel map zooming and translation for a smooth interactive experience for users. 
+				Users can zoom into the map to view the judicial districts and the counties.
+				<div class = "img" id = "hrsp-jd" ></div>
+				<div class = "img" id = "hrsp-county" ></div>
+				Clicking on a state, judicial district or county filters the table for the clicked region.
+				<div class = "img" id = "hrsp-county-filtered" ></div>
+				If the user wants to check the location of the physician, they can click on the physician row on the table to add a yellow marker on the map which indicates the actual geographic location of the selected physician.
+				<div class = "img" id = "hrsp-county-zoom" ></div>
+				An example of using bootstrap tutorial for user reference.
+				<div class = "img" id = "tutorial" ></div>
+			</div>
 		</div>
 	</body>
 </html>
