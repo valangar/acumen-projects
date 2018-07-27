@@ -9,7 +9,7 @@
 }
 html {
 	font-size: 14px;
-	color: #666;
+	color: #9E9E9E;
 	font-family: sans-serif;
 	font-weight: normal;
 }
@@ -45,6 +45,18 @@ h2, h3, h4, h5 {
 	width:100%;
 	text-align: right;
 	margin-top: 0px;
+}
+.dates {
+	display:flex;
+	justify-content:space-between;
+	font-style: italic;
+	color: var(--main-teal-light);
+	margin-bottom: 50px;
+}
+.tech-used {
+	font-weight:bold;
+	color: var(--main-teal-light);
+	margin-top: 25px;
 }
 #hrsp {
 	content: url("./images/b_HRSP.png");
