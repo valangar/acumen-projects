@@ -10,7 +10,7 @@
 html {
 	font-size: 14px;
 	color: #9E9E9E;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: normal;
 }
 body {
@@ -25,13 +25,6 @@ hr {
 #main-container {
 	width: 1000px;
 	
-}
-.img{
-	padding: 5px;
-	box-shadow:  0px 5px 20px 0px #9e9e9ec9;
-	margin: 5px;
-	height: 500px;
-	background-size: cover;
 }
 h1 {
 	color:var(--main-teal);
@@ -53,29 +46,224 @@ h2, h3, h4, h5 {
 	color: var(--main-teal-light);
 	margin-bottom: 50px;
 }
-.tech-used {
+.section-title {
 	font-weight:bold;
 	color: var(--main-teal-light);
 	margin-top: 25px;
 }
+#content {
+	display: flex;
+	flex-direction: column;
+}
+#screenshot-title {
+	margin-bottom: 15px;
+}
+.multi-imgs {
+	display: flex;
+}
+.img-desc {
+	display: flex;
+	margin-bottom: 20px;
+}
+.desc {
+	width: 80%;
+}
+.img, .img-sub{
+	padding: 5px;
+	box-shadow:  0px 5px 20px 0px #9e9e9ec9;
+	margin: 5px;
+	background-size: cover;
+}
+.desc {
+	margin-top: 5px;
+    border-top: 0.5px solid #00808085;
+    padding: 20px 0px 0px 50px;
+}
+.update-height {
+	height: 140px;
+}
+.img-wrap {
+  position: relative;
+  cursor: pointer;
+}
+
+.img-text-layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #00b3b3c4;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img-wrap:hover .img-text-layer  {
+  visibility: visible;
+  opacity: 1;
+}
+
+.img-text {
+  transition: .2s;
+  transform: translateY(1em);
+}
+
+.img-wrap:hover .img-text {
+  transform: translateY(0);
+}
 #hrsp {
-	content: url("./images/b_HRSP.png");
+	content: url("./images/b_HRSP_small.png");
 }
 #hrsp-jd {
-	content: url("./images/HRSP_JD.png");
+	content: url("./images/HRSP_JD_small.png");
 }
 #hrsp-county {
-	content: url("./images/hrsp_counties.png");
+	content: url("./images/hrsp_counties_small.png");
 }
 #hrsp-county-zoom {
-	content: url("./images/hrsp_counties_zoomed.png");
+	content: url("./images/hrsp_counties_zoomed_small.png");
 }
 #hrsp-county-filtered {
-	content: url("./images/hrsp_county_filtered.png");
+	content: url("./images/hrsp_county_filtered_small.png");
 }
 #hrsp-table-metrics {
-	content: url("./images/hrsp_table_metrics.png");
+	content: url("./images/hrsp_table_metrics_small.png");
 }
 #tutorial {
-	content: url("./images/HRSP_tutorial.png");
+	content: url("./images/HRSP_tutorial_small.png");
+}
+
+
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
