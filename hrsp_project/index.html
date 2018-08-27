@@ -10,56 +10,49 @@
     </head>
     <body>
 		<div id="main-container">
-			<h1>High Risk Score Physicians </h1>
-			<h4 class="float-right">- Visualizing the geographic distribution of physicians across the nation</h4>
-			
+			<div class = "title">
+				<h1>High Risk Score Physicians </h1>
+				<h4 class="float-right">- Visualizing the geographic distribution of physicians across the nation</h4>
+				<div class = "dates">
+					<div id="date">Page updated: 26 August, 2018</div>
+					<div id="proj-date-loc">Project: November, 2017 - Acumen, LLC</div>
+				</div>
+			</div>
 			<hr>
 			<br><br>
 			<div id="intro-container">
-				<div class = "dates">
-					<div id="date">Page updated: 01 August, 2018</div>
-					<div id="proj-date-loc">Project: November, 2017 - Acumen, LLC</div>
-				</div>
 				<div id="intro-p">
-					The clients for this project assign a risk score rank to various physicians in the nation, which helps determine the physician of interest in an investigation. The tool provides a visual representation of these ranks and a geographic understanding of the physicians' location.
+					This visualization application developed for a national analysis was my first project at <a class="text-link" href="https://www.acumenllc.com/">Acumen, LLC</a>. <br>
+					Our clients assign a risk score rank to various physicians in the nation, which helps determine the physician of interest in an investigation. The tool provides a visual representation of these ranks along with a geographic understanding of the physicians' location.
 					<br>
+					<div class="section-title">Process: </div>
 					<br>
-					This standalone visualization tool was my first end-to-end contribution. I was involved in:
+					<div class="flex">As the main contributor on this project, I was involved in <div class="blue">Discussions, Brainstorming Sessions</div>,<div class="yellow">Designing, Documenting</div>and <div class="green">Development (coding)</div>. </div>
+					My timeline looked something like this:
 					<br>
-					<ul>
-						<li>gathering requirements from the client,</li>
-						<li>determining the user work flow, </li>
-						<li>designing the user interface, </li>
-						<li>implementing the application, </li>
-						<li>incorporating feedback, making changes to UI, updating features</li>
-						<li>debugging, checking for cross-browser compatibility - mainly Chrome and IE browsers</li>
-						<li>documenting code, creating user guides</li>
-					</ul>
-					The first iteration of the application took one month to implement, followed by the feedback phase.
-					
+					<img class = "timeline" src="./images/hrsp_timeline.png"/>
 					<div class="section-title">Technologies used: </div>
 					<ul>
-						<li>JavaScript - JQuery</li>
-						<li>D3.js for the map visualization and interactions</li>
-						<li>DataTable library for table</li>
-						<li>require.js to include libraries, modules</li>
-						<li>Bootstrap for the tutorial</li>
+						<li><b>JavaScript - JQuery</b></li>
+						<li><b>D3.js</b> for the map visualization and interactions</li>
+						<li><b>DataTables</b> library for table</li>
+						<li><b>require.js</b> to include libraries, modules</li>
+						<li><b>Bootstrap</b> for the tutorial</li>
 					</ul>
 				</div>
 			</div>
 			<div id="content">
 				<div id = "screenshot-title" class="section-title">Screenshots: </div>
-				
 				<div class = "img-desc">
 					<div class = "img-wrap">
 						<div class = "img" id = "hrsp" ></div>
-						<div class="img-text-layer">
+						<div class="img-text-layer" onclick="openModal();currentSlide(1)">
 							<p class="img-text">Click to view full screen ...</p>
 						</div>
 					</div>
 					<div class = "desc" id = "hrsp-desc">
-						The final tool with the map view looks like this:
-					
+						The final tool with the map view.
+						<br>
 						It contains two views:
 						<ul>
 							<li>Map View - default view</li>
@@ -76,7 +69,7 @@
 				<div class = "img-desc">
 					<div class = "img-wrap">
 						<div class = "img" id = "hrsp-table-metrics" ></div>
-						<div class="img-text-layer">
+						<div class="img-text-layer" onclick="openModal();currentSlide(2)">
 							<p class="img-text">Click to view full screen ...</p>
 						</div>
 					</div>
@@ -90,13 +83,13 @@
 					<div  class = "multi-imgs">
 						<div class = "img-wrap">
 							<div class = "img-sub" id = "hrsp-jd" ></div>
-							<div class="img-text-layer">
+							<div class="img-text-layer" onclick="openModal();currentSlide(3)">
 								<p class="img-text">Click to view full screen ...</p>
 							</div>
 						</div>
 						<div class = "img-wrap">
 							<div class = "img-sub" id = "hrsp-county" ></div>
-							<div class="img-text-layer">
+							<div class="img-text-layer" onclick="openModal();currentSlide(4)">
 								<p class="img-text">Click to view full screen ...</p>
 							</div>
 						</div>
@@ -110,13 +103,13 @@
 					<div  class = "multi-imgs">
 						<div class = "img-wrap">
 							<div class = "img-sub" id = "hrsp-county-filtered" ></div>
-							<div class="img-text-layer">
+							<div class="img-text-layer" onclick="openModal();currentSlide(5)">
 								<p class="img-text">Click to view full screen ...</p>
 							</div>
 						</div>
 						<div class = "img-wrap update-height">
 							<div class = "img-sub" id = "hrsp-county-zoom" ></div>
-							<div class="img-text-layer">
+							<div class="img-text-layer" onclick="openModal();currentSlide(6)">
 								<p class="img-text">Click to view full screen ...</p>
 							</div>
 						</div>
@@ -130,7 +123,7 @@
 				<div class = "img-desc">
 					<div class = "img-wrap">
 						<div class = "img" id = "tutorial" ></div>
-						<div class="img-text-layer">
+						<div class="img-text-layer" onclick="openModal();currentSlide(7)">
 							<p class="img-text">Click to view full screen ...</p>
 						</div>
 					</div>
@@ -139,6 +132,85 @@
 						An example of using bootstrap tutorial for user reference.
 					</div>
 				</div>
+			</div>
+			<!-- The Modal/Lightbox -->
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+			
+				<div class="mySlides">
+					<div class="numbertext">1 / 7</div>
+					<img src="./images/b_HRSP.png" style="width:100%">
+				</div>
+			
+				<div class="mySlides">
+					<div class="numbertext">2 / 7</div>
+					<img src="./images/hrsp_table_metrics.png" style="width:100%">
+				</div>
+			
+				<div class="mySlides">
+					<div class="numbertext">3 / 7</div>
+					<img src="./images/HRSP_JD.png" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">4 / 7</div>
+					<img src="./images/hrsp_counties.png" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">5 / 7</div>
+					<img src="./images/hrsp_county_filtered.png" style="width:100%">
+				</div>
+				<div class="mySlides">
+					<div class="numbertext">6 / 7</div>
+					<img src="./images/hrsp_counties_zoomed.png" style="width:100%">
+				</div>
+				<div class="mySlides">
+					<div class="numbertext">7 / 7</div>
+					<img src="./images/HRSP_tutorial.png" style="width:100%">
+				</div>
+
+				<!-- Next/previous controls -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			
+				<!-- Caption text -->
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+			
+				<div class = "thumbnail-area">
+					<!-- Thumbnail image controls -->
+					<div class="column">
+						<img class="demo" src="./images/b_HRSP_small.png" onclick="currentSlide(1)" alt="The final tool with the map view">
+					</div>
+				
+					<div class="column">
+						<img class="demo" src="./images/hrsp_table_metrics_small.png" onclick="currentSlide(2)" alt="The Table metrics view">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="./images/HRSP_JD_small.png" onclick="currentSlide(3)" alt="The Table metrics view">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="./images/hrsp_counties_small.png" onclick="currentSlide(4)" alt="The Table metrics view">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="./images/hrsp_county_filtered_small.png" onclick="currentSlide(5)" alt="The Table metrics view">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="./images/hrsp_counties_zoomed_small.png" onclick="currentSlide(6)" alt="The Table metrics view">
+					</div>
+
+					<div class="column">
+						<img class="demo" src="./images/HRSP_tutorial_small.png" onclick="currentSlide(7)" alt="The Table metrics view">
+					</div>
+				</div>
+			
 			</div>
 		</div>
 		<script src = "./main.js"></script>
