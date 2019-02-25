@@ -16,17 +16,28 @@ html {
 	font-weight: normal;
 }
 body {
-	display:flex;
-	justify-content: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f8f8f8;
+  
 }
 hr {
 	border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #004d4d, rgba(0, 0, 0, 0));
 }
+.title {
+  background-color: #f2f2f2;
+  box-shadow: 0px 4px 5px #8080802b;
+}
+.title-inner {
+  width:1000px;
+  margin:auto;
+}
 #main-container {
 	width: 1000px;
-	
+	margin:auto;
 }
 h1 {
 	color:var(--main-teal);
@@ -128,26 +139,14 @@ h2, h3, h4, h5 {
 .img-wrap:hover .img-text {
   transform: translateY(0);
 }
-#hrsp {
-	content: url("./images/b_HRSP_small.png");
+#cm {
+	content: url("./images/CM_Tool_small.png");
 }
-#hrsp-jd {
-	content: url("./images/HRSP_JD_small.png");
+#cm-filter {
+	content: url("./images/CM_Tool_filtered_small.png");
 }
-#hrsp-county {
-	content: url("./images/hrsp_counties_small.png");
-}
-#hrsp-county-zoom {
-	content: url("./images/hrsp_counties_zoomed_small.png");
-}
-#hrsp-county-filtered {
-	content: url("./images/hrsp_county_filtered_small.png");
-}
-#hrsp-table-metrics {
-	content: url("./images/hrsp_table_metrics_small.png");
-}
-#tutorial {
-	content: url("./images/HRSP_tutorial_small.png");
+#cm-search {
+	content: url("./images/CM_Tool_search_small.png");
 }
 .timeline{
   width: 1000px;

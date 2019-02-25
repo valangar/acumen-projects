@@ -2,216 +2,29 @@
 <html lang = "en">
     <head>
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>High Risk Physicians</title>
+		<title>Ownership Relationships</title>
 		<link rel="shortcut icon" href="../va_logo.png"/>
 		<link rel="stylesheet" href="./main.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 		<script src = "https://d3js.org/d3.v4.min.js"></script>
     </head>
     <body>
-		<div id="main-container">
-			<div class = "title">
-				<h1>High Risk Score Physicians </h1>
-				<h4 class="float-right">- Visualizing the geographic distribution of physicians across the nation</h4>
+		<div class = "title">
+			<div class = "title-inner">
+				<h1>Ownership Relationships</h1>
+				<h4 class="float-right">- Visualizing the 0ver 100,000 connections between owners and owned entities</h4>
 				<div class = "dates">
-					<div id="date">Page updated: 26 August, 2018</div>
-					<div id="proj-date-loc">Project: November, 2017 - Acumen, LLC</div>
+					<div id="date">Page updated: 25 February, 2019</div>
+					<div id="proj-date-loc">Project: October, 2017 - Acumen, LLC</div>
 				</div>
 			</div>
-			<hr>
+		</div>
+		<div id="main-container">
 			<br><br>
-			<div id="intro-container">
-				<div id="intro-p">
-					This visualization application developed for a national analysis was my first project at <a class="text-link" href="https://www.acumenllc.com/">Acumen, LLC</a>. <br>
-					Our clients assign a risk score rank to various physicians in the nation, which helps determine the physician of interest in an investigation. The tool provides a visual representation of these ranks along with a geographic understanding of the physicians' location.
-					<br>
-					<div class="section-title">Process: </div>
-					<br>
-					<div class="flex">As the main contributor on this project, I was involved in <div class="blue">Discussions, Brainstorming Sessions</div>,<div class="yellow">Designing, Documenting</div>and <div class="green">Development (coding)</div>. </div>
-					My timeline looked something like this:
-					<br>
-					<img class = "timeline" src="./images/hrsp_timeline.png"/>
-					<div class="section-title">Technologies used: </div>
-					<ul>
-						<li><b>JavaScript - JQuery</b></li>
-						<li><b>D3.js</b> for the map visualization and interactions</li>
-						<li><b>DataTables</b> library for table</li>
-						<li><b>require.js</b> to include libraries, modules</li>
-						<li><b>Bootstrap</b> for the tutorial</li>
-					</ul>
-				</div>
-			</div>
-			<div id="content">
-				<div id = "screenshot-title" class="section-title">Screenshots: </div>
-				<div class = "img-desc">
-					<div class = "img-wrap">
-						<div class = "img" id = "hrsp" ></div>
-						<div class="img-text-layer" onclick="openModal();currentSlide(1)">
-							<p class="img-text">Click to view full screen ...</p>
-						</div>
-					</div>
-					<div class = "desc" id = "hrsp-desc">
-						The final tool with the map view.
-						<br>
-						It contains two views:
-						<ul>
-							<li>Map View - default view</li>
-							<li>Table View - containing controls to toggle the table columns</li>
-						</ul>
-						The table shows up in both the views.
-						The Map View has two functionalities:
-						<ul>
-							<li> Provide a visual representation of ranks of regions based on various metrics</li>
-							<li>Act as a controller to filter the table of physician information.</li>
-						</ul>
-					</div>
-				</div>
-				<div class = "img-desc">
-					<div class = "img-wrap">
-						<div class = "img" id = "hrsp-table-metrics" ></div>
-						<div class="img-text-layer" onclick="openModal();currentSlide(2)">
-							<p class="img-text">Click to view full screen ...</p>
-						</div>
-					</div>
-					<div class = "desc" id = "hrsp-table-metrics-desc">
-						The Table metrics view has a list of all the columns in the table and can be used to toggle the visibility of these columns. 
-						All the columns highlighted in blue are visible in the table.
-						Users can also toggle visibility of a group of columns.
-					</div>
-				</div>
-				<div class = "img-desc">
-					<div  class = "multi-imgs">
-						<div class = "img-wrap">
-							<div class = "img-sub" id = "hrsp-jd" ></div>
-							<div class="img-text-layer" onclick="openModal();currentSlide(3)">
-								<p class="img-text">Click to view full screen ...</p>
-							</div>
-						</div>
-						<div class = "img-wrap">
-							<div class = "img-sub" id = "hrsp-county" ></div>
-							<div class="img-text-layer" onclick="openModal();currentSlide(4)">
-								<p class="img-text">Click to view full screen ...</p>
-							</div>
-						</div>
-					</div>
-					<div class = "desc" id = "jd-county-desc">
-						I implemented mouse wheel map zooming and translation for a smooth interactive experience for users. 
-						Users can zoom into the map to view the judicial districts and the counties.
-					</div>
-				</div>
-				<div class = "img-desc">
-					<div  class = "multi-imgs">
-						<div class = "img-wrap">
-							<div class = "img-sub" id = "hrsp-county-filtered" ></div>
-							<div class="img-text-layer" onclick="openModal();currentSlide(5)">
-								<p class="img-text">Click to view full screen ...</p>
-							</div>
-						</div>
-						<div class = "img-wrap update-height">
-							<div class = "img-sub" id = "hrsp-county-zoom" ></div>
-							<div class="img-text-layer" onclick="openModal();currentSlide(6)">
-								<p class="img-text">Click to view full screen ...</p>
-							</div>
-						</div>
-
-					</div>
-					<div class = "desc" id = "zoom-desc">
-						Clicking on a state, judicial district or county filters the table for the clicked region.
-						If the user wants to check the location of the physician, they can click on the physician row on the table to add a yellow marker on the map which indicates the actual geographic location of the selected physician.
-					</div>
-				</div>
-				<div class = "img-desc">
-					<div class = "img-wrap">
-						<div class = "img" id = "tutorial" ></div>
-						<div class="img-text-layer" onclick="openModal();currentSlide(7)">
-							<p class="img-text">Click to view full screen ...</p>
-						</div>
-					</div>
-
-					<div class = "desc" id = "tutorial-desc">
-						An example of using bootstrap tutorial for user reference.
-					</div>
-				</div>
-			</div>
-			<!-- The Modal/Lightbox -->
-			<div id="myModal" class="modal">
-				<span class="close cursor" onclick="closeModal()">&times;</span>
-				<div class="modal-content">
-			
-				<div class="mySlides">
-					<div class="numbertext">1 / 7</div>
-					<img src="./images/b_HRSP.png" style="width:100%">
-				</div>
-			
-				<div class="mySlides">
-					<div class="numbertext">2 / 7</div>
-					<img src="./images/hrsp_table_metrics.png" style="width:100%">
-				</div>
-			
-				<div class="mySlides">
-					<div class="numbertext">3 / 7</div>
-					<img src="./images/HRSP_JD.png" style="width:100%">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">4 / 7</div>
-					<img src="./images/hrsp_counties.png" style="width:100%">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">5 / 7</div>
-					<img src="./images/hrsp_county_filtered.png" style="width:100%">
-				</div>
-				<div class="mySlides">
-					<div class="numbertext">6 / 7</div>
-					<img src="./images/hrsp_counties_zoomed.png" style="width:100%">
-				</div>
-				<div class="mySlides">
-					<div class="numbertext">7 / 7</div>
-					<img src="./images/HRSP_tutorial.png" style="width:100%">
-				</div>
-
-				<!-- Next/previous controls -->
-				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-				<a class="next" onclick="plusSlides(1)">&#10095;</a>
-			
-				<!-- Caption text -->
-				<div class="caption-container">
-					<p id="caption"></p>
-				</div>
-			
-				<div class = "thumbnail-area">
-					<!-- Thumbnail image controls -->
-					<div class="column">
-						<img class="demo" src="./images/b_HRSP_small.png" onclick="currentSlide(1)" alt="Final Tool with the Map View">
-					</div>
-				
-					<div class="column">
-						<img class="demo" src="./images/hrsp_table_metrics_small.png" onclick="currentSlide(2)" alt="Table Metrics View">
-					</div>
-
-					<div class="column">
-						<img class="demo" src="./images/HRSP_JD_small.png" onclick="currentSlide(3)" alt="Map Zooming, Districts View">
-					</div>
-
-					<div class="column">
-						<img class="demo" src="./images/hrsp_counties_small.png" onclick="currentSlide(4)" alt="Map Zooming, Counties View">
-					</div>
-
-					<div class="column">
-						<img class="demo" src="./images/hrsp_county_filtered_small.png" onclick="currentSlide(5)" alt="Map used as a Controller: Click on the map to filter table to the clicked region information.">
-					</div>
-
-					<div class="column">
-						<img class="demo" src="./images/hrsp_counties_zoomed_small.png" onclick="currentSlide(6)" alt="Yellow Marker indicates selected physician's location.">
-					</div>
-
-					<div class="column">
-						<img class="demo" src="./images/HRSP_tutorial_small.png" onclick="currentSlide(7)" alt="Bootstrap Tutorial">
-					</div>
-				</div>
-			
-			</div>
+			<video width="1000" height="500" controls>
+				<source src="./media/ownership_demo.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
 		</div>
 		<script src = "./main.js"></script>
 	</body>
