@@ -2,7 +2,7 @@
 <html lang = "en">
     <head>
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Ownership Relationships</title>
+		<title>Visualizing a Network of Relationships</title>
 		<link rel="shortcut icon" href="../va_logo.png"/>
 		<link rel="stylesheet" href="./main.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
@@ -11,7 +11,7 @@
     <body>
 		<div class = "title">
 			<div class = "title-inner">
-				<h1>Ownership Relationships</h1>
+				<h1>Visualizing a Network of Relationships</h1>
 				<h4 class="float-right">- Visualizing the 0ver 100,000 connections between owners and owned entities</h4>
 				<div class = "dates">
 					<div id="date">Page updated: 25 February, 2019</div>
@@ -26,6 +26,7 @@
 					<p>This tool provides a visual representation of a highly connected dataset, to understand the relationship between health care owners and providers.</p>
 					<h3 class="section-title">PROCESS: </h3>
 					<p class="flex">As the main contributor on this project, I was involved in the Discussions, Brainstorming Sessions, Designing, Documenting and Implementation stages.</p>
+					<img width="100%" height="100%" src="./media/process.png" alt="Process diagram"/>
 					<h3 class="section-title">TECH STACK: </h3>
 					<ul>
 						<li>JavaScript - JQuery</li>
@@ -33,6 +34,8 @@
 						<li>require.js to include libraries, modules</li>
 						<li>Bootstrap for the tutorial</li>
 					</ul>
+					<p>I follow a Model-View-Controller pattern to structure the code:</p>
+					<img width="100%" height="100%" src="./media/mvc.png" alt="Model View Controller Diagram"/>
 				</div>
 			</div>
 			<div id="content">
@@ -64,6 +67,14 @@
 					<source src="./media/ownership.mp4" type="video/mp4">
 					Your browser does not support the video tag.
 				</video>
+
+				<h3>CHALLENGE:</h3>
+				<p>One of the major challenges in developing this application was the clients changing requirements and the tight deadlines.
+					<br> To meet the deadline, I spent a some time to plan out and document the code first – specify the variables and functions I would need, etc.
+					<br> The screenshot below is a snippet of documentation I made before implementing the code.
+					<br> After many iterations of the document, and once a clear direction was visible, I coded it up.
+				</p>
+				<img id="code-doc-img" src="media/code_doc.png" alt="Snippet of code documentation"/>
 			</div>
 			<!-- The Modal/Lightbox -->
 			<div id="myModal" class="modal">
@@ -86,7 +97,7 @@
 			
 				<!-- Caption text -->
 				<div class="caption-container">
-					<p id="caption"></p>
+					<p id="caption">Network visualization</p>
 				</div>
 			
 			</div>

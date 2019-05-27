@@ -24,9 +24,20 @@
 				<br><br>
 				<div id="intro-container">
 					<div id="intro-p">
-						<p>This tool provides a geographic representation of the impact of Competetive Bidding (CB) Policy introduced in CB areas by the Center for Medicare and Medicaid Services.</p>
+						<p>
+							This tool provides a geographic representation of the impact of Competetive Bidding (CB) Policy introduced in CB areas by the Center for Medicare and Medicaid Services.
+							<br>
+							For different population types and groups, scores were assigned based on the health of the population after using the equipment for a certain period. 
+							<br><br>
+							<strong>Two Considerations:</strong>
+							<ol>
+								<li>Was to draw immediate attention to areas that were both negatively and positively impacted by the policy. The negatively impacted areas are in red and the positives are in blue.</li>
+								<li>Check for similar trends in neighboring areas. </li>
+							</ol>
+						</p>
 						<h3 class="section-title">PROCESS: </h3>
 						<p class="flex">As the main contributor on this project, I was involved in the Discussions, Brainstorming Sessions, Designing, Documenting and Implementation stages.</p>
+						<img width="100%" height="100%" src="./images/process.png" alt="Process diagram"/>
 						<h3 class="section-title">TECH STACK: </h3>
 						<ul>
 							<li>JavaScript - JQuery</li>
@@ -34,11 +45,21 @@
 							<li>require.js to include libraries, modules</li>
 							<li>Bootstrap for the tutorial</li>
 						</ul>
+						<p>I follow a Model-View-Controller pattern to structure the code:</p>
+						<img width="100%" height="100%" src="./images/mvc.png" alt="Model View Controller Diagram"/>
+						<p>Following is a module that creates a legend for a map:</p>
+						<img id="collapsed-mvc" src="images/collapsed_code_mvc.png" alt="Collapsed Reusable Module Code for Legend Generation using D3.js" />
+						<p>
+							The module code is collapsed to only reveal the structure.
+							<br>The module contains a legend function nested within an outer function forming a closure.
+							<br>It has getters and setters to help configure the module.
+							<br>Structuring it this way helped create highly reusable visualizations.
+						</p>						
 					</div>
 				</div>
 				<div id="content">
 					<h3 id = "screenshot-title" class="section-title">SCREENSHOTS: </h3>
-						<div class="row">
+					<div class="row">
 						<div class = "img-desc">
 							<div class = "img-wrap">
 								<div class = "img" id = "cm" ></div>
@@ -64,6 +85,17 @@
 							</div>
 						</div>
 					</div>
+					<h3>CHALLENGE:</h3>
+					<p>
+						The main concern with these D3.js map visuals is that it affected the initial load time. Relatively simple visuals like this one would take 15 to 20 seconds to load.
+						<br><br>
+						This was due to projection of the shapefile into SVG paths as the tool initially loaded.
+						<br><br>	
+						To overcome this issue, I worked on a <strong>command-line cartography</strong> technique that generated projected SVG file that were then ready to use in the application.
+						<br><br>
+						<strong>This reduced the load time considerably from 20 seconds down to 2 seconds (by 10 times). </strong>
+						<img id="svg-code-img" src="images/code_snippet.png" alt="Projected SVG file generated through Command-line Cartography" />
+					</p>
 				</div>
 				<!-- The Modal/Lightbox -->
 				<div id="myModal" class="modal">
