@@ -19,9 +19,8 @@ body {
   display:flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #f8f8f8;
   margin: 0px;
-  background-color: #e6e7e9;
+  /* background-color: #e6e7e9; */
 }
 hr {
 	border: 0;

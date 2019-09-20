@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 0px;
-  background-color: #e6e7e9;
+  /* background-color: #e6e7e9; */
 }
 hr {
 	border: 0;

@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 0px;
-  background-color: #e6e7e9;
+  /* background-color: #e6e7e9; */
 }
 hr {
 	border: 0;
