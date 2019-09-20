@@ -13,18 +13,127 @@
 			<div class = "title-inner">
 				<h1>Provider Profile Tool</h1>
 				<div class = "dates">
-					<div id="date">Page updated: 25 February, 2019</div>
-					<div id="proj-date-loc">Project: Ongoing - Acumen, LLC</div>
+					<div id = "date">Page updated: 24 May, 2019</div>
+					<div id = "proj-date-loc">Project: Ongoing - Acumen, LLC</div>
 				</div>
 			</div>
 		</div>
-		<div id="main-container">
+		<div id = "main-container">
 			<br><br>
-			<video width="1000" height="500" controls>
-				<source src="./media/doj.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video>
-		</div>
+			<div id="intro-container">
+				<div id="intro-p">
+					<p>
+						This project is a large-scale software solution to connect multiple analyses for health care investigations.
+					</p>
+					<h3 class="section-title">PROCESS: </h3>
+					<p class="flex">As one of the core developers of this web application, I am involved in designing and implementing visualizations, UI components and features in the tool.</p>
+					<h3 class="section-title">TECH STACK: </h3>
+					<ul>
+						<li>JavaScript</li>
+						<li>D3.js for the interactive visualizations</li>
+						<li>Vue.js Framework</li>
+						<li>Webpack</li>
+						<li>Bootstrap</li>
+						<li>PostgreSQL</li>
+						<li>JIRA Task Tracking</li>
+						<li>Upsource Code Reviewing</li>
+						<li>Confluence Documentation</li>
+					</ul>
+					<p> We also follow AGILE development process with two-weeks sprints.</p>
+				</div>
+			</div>
+			<div id="content">
+				<h3 id = "screenshot-title" class="section-title">SCREENSHOTS: </h3>
+				<div class = "img-desc">
+					<div class = "img-wrap">
+						<div class = "img" id = "landing-phy" ></div>
+						<div class="img-text-layer" onclick="openModal();currentSlide(1)">
+							<p class="img-text">Click to view full screen ...</p>
+						</div>
+					</div>
+					<p class = "desc" id = "landing-phy-desc">
+						Summary page for the selected profile. Contains panels of analyses summaries for the selected physician, or institution.
+					</p>
+				</div>
+				<div class = "img-desc">
+					<div class = "img-wrap">
+						<div class = "img" id = "amb" ></div>
+						<div class="img-text-layer" onclick="openModal();currentSlide(2)">
+							<p class="img-text">Click to view full screen ...</p>
+						</div>
+					</div>
+					<p class = "desc" id = "amb-desc">
+						Ambulance report page with detailed information about ambulance services including ground and air transportation.
+					</p>
+				</div>
+				<div class = "img-desc">
+					<div  class = "multi-imgs">
+						<div class = "img-wrap">
+							<div class = "img-sub" id = "ref-rel-old" ></div>
+							<div class="img-text-layer" onclick="openModal();currentSlide(3)">
+								<p class="img-text">Click to view full screen ...</p>
+							</div>
+						</div>
+						<div class = "img-wrap">
+							<div class = "img-sub" id = "ref-rel" ></div>
+							<div class="img-text-layer" onclick="openModal();currentSlide(4)">
+								<p class="img-text">Click to view full screen ...</p>
+							</div>
+						</div>
+					</div>
+					<p class = "desc" id = "ref-desc">
+						The screenshots show the geographic distribution of physicians across the nation and their relationship to the searched physician.
+						<br><br>
+						The screenshot on the left shows the old design. I implemented an updated design of the map (right).
+					</p>
+				</div>
+				<h3 id = "screenshot-title" class="section-title">DEMO: </h3>
+				<video width = "1000" height="500" controls>
+					<source src="./media/doj.mp4" type = "video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<h3>KEY CONSIDERATIONS:</h3>
+				<ol>
+					<li>Organize and structure components for easy integration - Spend more time trying to organize and structure the reusable components so other users have an easy time integrating the components to theirs.</li>
+					<li>Flexible test data to handle edge cases - Creating edge cases in the fake data.</li>
+				</ol>
+			</div>
+			<!-- The Modal/Lightbox -->
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+			
+					<div class="mySlides">
+						<div class="numbertext">1 / 4</div>
+						<img src="./media/new_layout/landing_phy.PNG" style="width:100%" alt="Summary page for the selected profile">
+					</div>
+				
+					<div class="mySlides">
+						<div class="numbertext">2 / 4</div>
+						<img src="./media/new_layout/amb.PNG" style="width:100%" alt="Ambulance report page with detailed information about ambulance services">
+					</div>
+				
+					<div class="mySlides">
+						<div class="numbertext">3 / 4</div>
+						<img src="./media/new_layout/ref_rel_old.PNG" style="width:100%" alt="Old design of the geographic distribution of physicians">
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">4 / 4</div>
+						<img src="./media/new_layout/ref_rel.PNG" style="width:100%" alt="Updated design of the geographic distribution of physicians">
+					</div>
+
+					<!-- Next/previous controls -->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				
+					<!-- Caption text -->
+					<div class="caption-container">
+						<p id="caption"></p>
+					</div>
+				</div>
+			</div>
+		</div> 
 		<script src = "./main.js"></script>
 	</body>
 </html>
